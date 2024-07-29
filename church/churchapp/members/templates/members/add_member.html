@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block title %}Add Member{% endblock %}
+
+{% block content %}
+    <h2>Add New Member</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Member</button>
+    </form>
+{% endblock %}
